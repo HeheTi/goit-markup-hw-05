@@ -78,7 +78,9 @@
             для вашего бизнеса
           </h1>
           <div class="row order-service">
-            <button type="button" class="hero-button">Заказать услугу</button>
+            <button type="button" class="hero-button" data-modal-open>
+              Заказать услугу
+            </button>
           </div>
         </div>
       </section>
@@ -151,6 +153,7 @@
                 width="370"
                 height="294"
               />
+              <p class="up-text">Десктопные приложения</p>
             </li>
             <li class="work-list-item">
               <img
@@ -160,6 +163,7 @@
                 width="370"
                 height="294"
               />
+              <p class="up-text">Мобильные приложения</p>
             </li>
             <li class="work-list-item">
               <img
@@ -169,6 +173,7 @@
                 width="370"
                 height="294"
               />
+              <p class="up-text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -472,5 +477,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="btn-close" data-modal-close>
+          <svg class="close-icon">
+            <use href="./images/sprite.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
+  <script src="./js/modal.js"></script>
 </html>
