@@ -102,12 +102,14 @@ p {
 } 
 */
 .site-nav .link {
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--title-text-color);
-
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -130,6 +132,8 @@ p {
   margin-right: 50px;
 }
 .auth-nav .link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   display: flex;
   /* padding-top: 32px;
   padding-bottom: 32px; */
@@ -156,12 +160,14 @@ p {
   justify-content: center;
 }
 .mail-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
 .smartphone-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 10px;
   height: 16px;
   margin-right: 10px;
@@ -227,6 +233,7 @@ p {
   margin-bottom: 9px;
 }
 .address > .link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(255, 255, 255, 0.6);
   display: block;
 }
@@ -259,6 +266,8 @@ p {
   margin-right: 10px;
 }
 .footer-social-link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   display: flex;
   width: 44px;
   height: 44px;
@@ -277,7 +286,7 @@ p {
 .footer-social-link:focus {
   background-color: var(--accent-color);
 }
-.footer-social-icon:hover,
+/* .footer-social-icon:hover,
 .footer-social-icon:focus {
   fill: var(--primary-white-color);
 }
@@ -285,6 +294,17 @@ p {
 .footer.social-link:hover .footer.social-icon,
 .footer.social-link:focus .footer.social-icon {
   fill: var(--primary-white-color);
+} */
+.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+
+  height: 4px;
+  bottom: 0;
+  left: 0%;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* -------- Уникальный контент страницы (index.html) Студия ----------*/
@@ -328,6 +348,7 @@ p {
   justify-content: center;
 }
 .hero-button {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   padding: 10px 32px;
   min-width: 200px;
@@ -501,6 +522,8 @@ p {
   margin-right: 10px;
 }
 .social-link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   width: 44px;
   height: 44px;
@@ -509,6 +532,7 @@ p {
   align-items: center;
 }
 .social-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 20px;
   height: 20px;
 
@@ -544,6 +568,7 @@ p {
   margin-right: 30px;
 }
 .client-link {
+  transition: border 2250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   width: 170px;
   height: 92px;
@@ -559,6 +584,7 @@ p {
   border: 1px solid var(--accent-color);
 }
 .client-icon {
+  transition: fill 2250ms cubic-bezier(0.4, 0, 0.2, 1)
   width: 106px;
   height: 60px;
   fill: #afb1b8;
@@ -696,7 +722,7 @@ p {
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 528px;
@@ -726,7 +752,7 @@ p {
 }
 
 .is-hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
   pointer-events: none;
 }
